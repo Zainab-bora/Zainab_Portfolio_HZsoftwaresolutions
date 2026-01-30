@@ -19,19 +19,20 @@ const projects = [
     live: "https://github.com/Zainab-bora/Moodware/releases/tag/MoodwareAppApk",
   },
   {
+    title: "Portfolio Website",
+    description:
+      "My personal portfolio showcasing projects, skills, and frontend-focused design decisions.",
+    tech: ["React", "Framer Motion", "CSS"],
+    github:
+      "https://github.com/Zainab-bora/Zainab_Portfolio_HZsoftwaresolutions",
+    live: "https://zainab-portfolio-tau.vercel.app/",
+  },
+  {
     title: "Billo – Invoice Generator",
     description:
       "A simple invoice generation tool designed with a strong focus on usability and clean layouts.",
     tech: ["UI/UX", "Product Design", "Web"],
     live: "https://get-paid-faster-with-billo.my.canva.site/billo-freelance-invoice-generator",
-  },
-  {
-    title: "Portfolio Website",
-    description:
-      "My personal portfolio showcasing projects, skills, and frontend-focused design decisions.",
-    tech: ["React", "Framer Motion", "CSS"],
-    github: "#",
-    live: "#",
   },
 ];
 
