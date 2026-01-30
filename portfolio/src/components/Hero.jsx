@@ -37,21 +37,23 @@ export default function Hero() {
         </p>
 
         <div style={styles.actions}>
-          <motion.button
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.97 }}
-            style={styles.primaryBtn}
+          <motion.a
+            href="#projects"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.96 }}
+            style={{ textDecoration: "none" }}
           >
-            View Projects
-          </motion.button>
+            <button style={styles.primaryBtn}>View Projects</button>
+          </motion.a>
 
-          <motion.button
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.97 }}
-            style={styles.secondaryBtn}
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.96 }}
+            style={{ textDecoration: "none" }}
           >
-            Contact Me
-          </motion.button>
+            <button style={styles.secondaryBtn}>Contact Me</button>
+          </motion.a>
         </div>
       </motion.div>
     </section>
@@ -68,7 +70,6 @@ const styles = {
     background:
       "linear-gradient(180deg, #f9fafb 0%, #f3f4f6 100%), radial-gradient(600px at 80% 20%, rgba(79,70,229,0.12), transparent 60%)",
   },
-  /*  Blobs */
   blob: {
     position: "absolute",
     width: "280px",

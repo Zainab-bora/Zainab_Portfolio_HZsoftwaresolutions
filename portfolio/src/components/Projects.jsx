@@ -8,7 +8,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     github:
       "https://github.com/Zainab-bora/HZSoftwareSolutions_Calculator_zainab",
-    live: "#",
+    live: "https://hz-software-solutions-calculator-za.vercel.app/",
   },
   {
     title: "Moodware 2.0",
