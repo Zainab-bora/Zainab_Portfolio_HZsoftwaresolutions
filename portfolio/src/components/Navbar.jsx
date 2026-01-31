@@ -47,6 +47,14 @@ export default function Navbar() {
             {item.charAt(0).toUpperCase() + item.slice(1)}
           </a>
         ))}
+        <a
+          href="/Zainab_Kashif_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={styles.resumeBtn}
+        >
+          Resume
+        </a>
       </div>
     </nav>
   );
@@ -86,5 +94,17 @@ const styles = {
   activeLink: {
     color: "#4f46e5",
     borderBottom: "2px solid rgba(79,70,229,0.6)",
+  },
+  resumeBtn: {
+    fontSize: "14px",
+    padding: "6px 14px",
+    borderRadius: "999px",
+    background: "rgba(79,70,229,0.14)",
+    color: "#4f46e5",
+    fontWeight: 600,
+    textDecoration: "none",
+    border: "1px solid rgba(79,70,229,0.35)",
+    lineHeight: 1.4,
+    transition: "all 0.25s ease",
   },
 };
