@@ -22,7 +22,7 @@ This is my personal portfolio website showcasing my projects, skills, and fronte
 - Personal Portfolio Website
 
 ## 🌐 Live Website
-👉 *(Add your Vercel link here once deployment succeeds)*
+https://zainab-portfolio-tau.vercel.app/
 
 ## 📬 Contact
 - LinkedIn: https://www.linkedin.com/in/zainab-kashif-585561265/
