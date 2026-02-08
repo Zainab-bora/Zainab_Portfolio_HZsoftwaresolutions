@@ -9,6 +9,7 @@ const projects = [
     github:
       "https://github.com/Zainab-bora/HZSoftwareSolutions_Calculator_zainab",
     live: "https://hz-software-solutions-calculator-za.vercel.app/",
+    image: "../images/calculator.png",
   },
   {
     title: "Moodware 2.0",
@@ -17,6 +18,7 @@ const projects = [
     tech: ["Kotlin", "Android Studio", "UI Design"],
     github: "https://github.com/Zainab-bora/Moodware",
     live: "https://github.com/Zainab-bora/Moodware/releases/tag/MoodwareAppApk",
+    image: "../images/moodware.png",
   },
   {
     title: "Portfolio Website",
@@ -26,6 +28,17 @@ const projects = [
     github:
       "https://github.com/Zainab-bora/Zainab_Portfolio_HZsoftwaresolutions",
     live: "https://zainab-portfolio-tau.vercel.app/",
+    image: "../images/portfolio.png",
+  },
+  {
+    title: "Echo Music Player Website",
+    description:
+      "A modern music player built with React featuring interactive playback controls, animated UI, song management, and lyrics display. Focused on clean component structure and smooth user experience.",
+    tech: ["React", "JavaScrip", "CSS", "UI/UX"],
+    github:
+      "https://github.com/Zainab-bora/Zainab_MusicPlayer_HZSoftwareSolutions_",
+    live: "https://echo-musicplayer-by-zainab.vercel.app/",
+    image: "../images/musicplayer.png",
   },
   {
     title: "Billo – Invoice Generator",
@@ -33,6 +46,7 @@ const projects = [
       "A simple invoice generation tool designed with a strong focus on usability and clean layouts.",
     tech: ["UI/UX", "Product Design", "Web"],
     live: "https://get-paid-faster-with-billo.my.canva.site/billo-freelance-invoice-generator",
+    image: "/images/billo.png",
   },
 ];
 
@@ -51,26 +65,46 @@ export default function Projects() {
             transition={{ duration: 0.25, ease: "easeOut" }}
             style={styles.card}
           >
-            <h3 style={styles.title}>{project.title}</h3>
-            <p style={styles.description}>{project.description}</p>
+            <div style={styles.cardInner}>
+              {/* LEFT SIDE */}
+              <div style={styles.cardContent}>
+                <h3 style={styles.title}>{project.title}</h3>
+                <p style={styles.description}>{project.description}</p>
 
-            <div style={styles.tech}>
-              {project.tech.map((item, i) => (
-                <span key={i} style={styles.tag}>
-                  {item}
-                </span>
-              ))}
-            </div>
+                <div style={styles.tech}>
+                  {project.tech.map((item, i) => (
+                    <span key={i} style={styles.tag}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
 
-            <div style={styles.actions}>
-              {project.github && (
-                <a href={project.github} style={styles.link}>
-                  GitHub
-                </a>
-              )}
-              {project.live && (
-                <a href={project.live} style={styles.linkSecondary}>
-                  Live
+                <div style={styles.actions}>
+                  {project.github && (
+                    <a href={project.github} style={styles.link}>
+                      GitHub
+                    </a>
+                  )}
+                  {project.live && (
+                    <a href={project.live} style={styles.linkSecondary}>
+                      Live
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              {project.image && (
+                <a
+                  href={project.image}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={styles.imageWrapper}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    style={styles.image}
+                  />
                 </a>
               )}
             </div>
@@ -93,7 +127,7 @@ const styles = {
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
+    gridTemplateColumns: "repeat(1, 1fr)",
     gap: "32px",
     maxWidth: "1100px",
     margin: "0 auto",
@@ -145,5 +179,33 @@ const styles = {
     fontSize: "14px",
     color: "#6b7280",
     textDecoration: "none",
+  },
+  cardInner: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: "30px",
+  },
+
+  cardContent: {
+    flex: 1,
+  },
+
+  imageWrapper: {
+    width: "280px",
+    height: "170px",
+    borderRadius: "14px",
+    overflow: "hidden",
+    flexShrink: 0,
+
+    border: "2px solid rgba(79,70,229,0.4)",
+    boxShadow: "0 6px 18px rgba(79,70,229,0.15)",
+  },
+
+  image: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    transition: "transform 0.3s ease",
   },
 };
